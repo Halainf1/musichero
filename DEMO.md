@@ -18,18 +18,46 @@ Esto abrirá la aplicación en `http://localhost:3000`
 
 ### ✅ Funciona actualmente:
 - ✅ Interfaz responsive y moderna
+- ✅ **Grabación de audio desde micrófono** 🎤
+- ✅ **Reproducción de grabaciones**
+- ✅ **Guardado automático de grabaciones**
+- ✅ **Timer de grabación en tiempo real**
 - ✅ Navegación suave entre secciones
 - ✅ Controles de reproductor (botones)
-- ✅ Lista de canciones demo
+- ✅ Lista de canciones demo y grabaciones
 - ✅ Tema oscuro elegante
 - ✅ Animaciones CSS
-- ✅ Notificaciones cuando se "reproduce" una canción
+- ✅ Notificaciones del sistema
 
 ### 🔄 En desarrollo:
 - 🔄 Reproducción real de audio (requiere archivos MP3)
 - 🔄 Barra de progreso funcional
 - 🔄 Subida de archivos de música
 - 🔄 Creación de playlists
+
+## 🎤 Cómo usar el Grabador de Audio
+
+### Paso a paso:
+1. **Abrir la aplicación** en tu navegador
+2. **Ir a la sección "Grabador"** (segundo elemento del menú)
+3. **Permitir acceso al micrófono** cuando el navegador lo solicite
+4. **Hacer clic en "🎤 Iniciar Grabación"**
+5. **Hablar, cantar o hacer sonidos** cerca del micrófono
+6. **Ver el timer** que muestra el tiempo de grabación
+7. **Hacer clic en "⏹️ Detener"** cuando termines
+8. **Reproducir tu grabación** con "▶️ Reproducir"
+9. **Guardar la grabación** con "💾 Guardar" (se descarga automáticamente)
+10. **Ver tu grabación** en la biblioteca con el icono 🎤
+
+### Requisitos:
+- ✅ Navegador moderno (Chrome, Firefox, Safari, Edge)
+- ✅ Micrófono funcional
+- ✅ Permisos de micrófono habilitados
+- ✅ Conexión HTTPS (para producción) o localhost
+
+### Formatos soportados:
+- **Grabación:** WebM con codec Opus
+- **Reproducción:** Todos los formatos soportados por el navegador
 
 ## Cómo añadir música real
 
@@ -43,7 +71,8 @@ this.tracks = [
         title: "Mi Canción",
         artist: "Mi Artista",
         duration: "3:45",
-        src: "src/assets/audio/mi-cancion.mp3"
+        src: "src/assets/audio/mi-cancion.mp3",
+        type: "demo"
     }
 ];
 ```

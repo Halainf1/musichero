@@ -16,6 +16,7 @@
             </div>
             <ul class="nav-menu">
                 <li><a href="#home">Inicio</a></li>
+                <li><a href="#recorder">Grabador</a></li>
                 <li><a href="#library">Biblioteca</a></li>
                 <li><a href="#playlists">Playlists</a></li>
                 <li><a href="#discover">Descubrir</a></li>
@@ -27,8 +28,8 @@
         <section id="home" class="hero-section">
             <div class="hero-content">
                 <h2>Bienvenido a MusicHero</h2>
-                <p>Tu plataforma favorita para gestionar y disfrutar de música</p>
-                <button class="cta-button">Comenzar</button>
+                <p>Tu plataforma favorita para gestionar, grabar y disfrutar de música</p>
+                <button class="cta-button">🎤 Comenzar a Grabar</button>
             </div>
         </section>
 
@@ -44,6 +45,26 @@
             </div>
             <div class="progress-bar">
                 <input type="range" id="progressSlider" min="0" max="100" value="0">
+            </div>
+        </section>
+
+        <section id="recorder" class="audio-recorder">
+            <h2>🎤 Grabador de Audio</h2>
+            <div class="recorder-controls">
+                <button id="startRecordBtn" class="record-btn">🎤 Iniciar Grabación</button>
+                <button id="stopRecordBtn" class="record-btn" disabled>⏹️ Detener</button>
+                <button id="playRecordBtn" class="record-btn" disabled>▶️ Reproducir</button>
+                <button id="saveRecordBtn" class="record-btn" disabled>💾 Guardar</button>
+            </div>
+            <div class="recording-status">
+                <div id="recordingIndicator" class="recording-indicator hidden">
+                    <span class="pulse-dot"></span>
+                    <span>Grabando...</span>
+                </div>
+                <div id="recordingTimer" class="recording-timer">00:00</div>
+            </div>
+            <div class="recorded-audio-container">
+                <audio id="recordedAudio" controls style="display: none;"></audio>
             </div>
         </section>
 

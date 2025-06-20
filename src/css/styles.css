@@ -178,6 +178,122 @@ body {
     cursor: pointer;
 }
 
+/* Grabador de Audio */
+.audio-recorder {
+    background-color: var(--background-card);
+    padding: 2rem;
+    border-radius: var(--border-radius);
+    margin-bottom: 3rem;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    text-align: center;
+}
+
+.audio-recorder h2 {
+    color: var(--text-light);
+    margin-bottom: 2rem;
+}
+
+.recorder-controls {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 2rem;
+    flex-wrap: wrap;
+}
+
+.record-btn {
+    background-color: var(--primary-color);
+    color: var(--text-light);
+    border: none;
+    padding: 1rem 1.5rem;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    transition: var(--transition);
+    min-width: 150px;
+}
+
+.record-btn:hover:not(:disabled) {
+    background-color: var(--accent-color);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(29, 185, 84, 0.3);
+}
+
+.record-btn:disabled {
+    background-color: var(--text-dark);
+    cursor: not-allowed;
+    opacity: 0.6;
+}
+
+.record-btn:active:not(:disabled) {
+    transform: translateY(0);
+}
+
+.recording-status {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+.recording-indicator {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: #ff4444;
+    font-weight: bold;
+}
+
+.recording-indicator.hidden {
+    display: none;
+}
+
+.pulse-dot {
+    width: 12px;
+    height: 12px;
+    background-color: #ff4444;
+    border-radius: 50%;
+    animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(0.95);
+        box-shadow: 0 0 0 0 rgba(255, 68, 68, 0.7);
+    }
+    70% {
+        transform: scale(1);
+        box-shadow: 0 0 0 10px rgba(255, 68, 68, 0);
+    }
+    100% {
+        transform: scale(0.95);
+        box-shadow: 0 0 0 0 rgba(255, 68, 68, 0);
+    }
+}
+
+.recording-timer {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--text-light);
+    font-family: 'Courier New', monospace;
+    background-color: var(--background-dark);
+    padding: 0.5rem 1rem;
+    border-radius: var(--border-radius);
+    min-width: 80px;
+}
+
+.recorded-audio-container {
+    margin-top: 1rem;
+}
+
+.recorded-audio-container audio {
+    width: 100%;
+    max-width: 400px;
+    margin: 1rem 0;
+}
+
 /* Biblioteca de Música */
 .music-library {
     background-color: var(--background-card);
@@ -204,6 +320,7 @@ body {
     border-radius: var(--border-radius);
     transition: var(--transition);
     cursor: pointer;
+    position: relative;
 }
 
 .track-item:hover {
@@ -211,11 +328,22 @@ body {
     transform: translateX(5px);
 }
 
+.track-icon {
+    font-size: 2rem;
+    margin-right: 1rem;
+    min-width: 50px;
+    text-align: center;
+}
+
 .track-item img {
     width: 50px;
     height: 50px;
     border-radius: var(--border-radius);
     margin-right: 1rem;
+}
+
+.track-details {
+    flex: 1;
 }
 
 .track-details h4 {
@@ -226,6 +354,15 @@ body {
 .track-details p {
     color: var(--text-dark);
     font-size: 0.9rem;
+}
+
+.recording-badge {
+    background-color: #ff4444;
+    color: white;
+    padding: 0.25rem 0.5rem;
+    border-radius: 12px;
+    font-size: 0.8rem;
+    font-weight: bold;
 }
 
 /* Footer */
@@ -246,6 +383,8 @@ body {
 
     .nav-menu {
         gap: 1rem;
+        flex-wrap: wrap;
+        justify-content: center;
     }
 
     .hero-content h2 {
@@ -257,8 +396,27 @@ body {
         text-align: center;
     }
 
+    .recorder-controls {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .record-btn {
+        min-width: 200px;
+    }
+
+    .recording-status {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
     .main-content {
         padding: 1rem;
+    }
+
+    .track-icon {
+        font-size: 1.5rem;
+        min-width: 40px;
     }
 }
 
@@ -271,6 +429,28 @@ body {
     to {
         opacity: 1;
         transform: translateY(0);
+    }
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideOut {
+    from {
+        transform: translateX(0);
+        opacity: 1;
+    }
+    to {
+        transform: translateX(100%);
+        opacity: 0;
     }
 }
 

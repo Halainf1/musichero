@@ -5,9 +5,11 @@ Una aplicación web moderna para gestionar y disfrutar de música. Construida co
 ## ✨ Características
 
 - 🎧 Reproductor de música integrado
+- 🎤 **Grabador de audio desde micrófono** (NUEVO)
 - 📚 Biblioteca de música organizada
 - 🎨 Interfaz moderna y responsive
 - 🔄 Controles de reproducción (play, pause, siguiente, anterior)
+- 💾 Guardado automático de grabaciones
 - 📱 Compatible con dispositivos móviles
 - 🌙 Tema oscuro elegante
 
@@ -34,9 +36,17 @@ O simplemente abre `index.html` en tu navegador.
 ## 💻 Uso
 
 1. **Abrir la aplicación:** Abre `index.html` en tu navegador
-2. **Reproducir música:** Haz clic en cualquier canción de la biblioteca
-3. **Controles:** Usa los botones de play/pause, anterior y siguiente
-4. **Navegación:** Usa el menú superior para navegar entre secciones
+2. **Grabar audio:** 
+   - Ve a la sección "Grabador"
+   - Permite el acceso al micrófono cuando se solicite
+   - Haz clic en "🎤 Iniciar Grabación"
+   - Habla o canta en el micrófono
+   - Haz clic en "⏹️ Detener" cuando termines
+   - Reproduce tu grabación con "▶️ Reproducir"
+   - Guarda tu grabación con "💾 Guardar"
+3. **Reproducir música:** Haz clic en cualquier canción de la biblioteca
+4. **Controles:** Usa los botones de play/pause, anterior y siguiente
+5. **Navegación:** Usa el menú superior para navegar entre secciones
 
 ## 📁 Estructura del Proyecto
 
@@ -62,7 +72,9 @@ musichero/
 - **HTML5:** Estructura semántica y elementos de audio
 - **CSS3:** Estilos modernos, Grid, Flexbox, animaciones
 - **JavaScript ES6+:** Lógica de la aplicación, clases, módulos
-- **Web Audio API:** Manejo avanzado de audio (futuras mejoras)
+- **Web Audio API:** Manejo avanzado de audio
+- **MediaRecorder API:** Grabación de audio desde micrófono
+- **getUserMedia API:** Acceso al micrófono del usuario
 
 ## 🎯 Funcionalidades Planeadas
 
