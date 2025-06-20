@@ -3,6 +3,8 @@ node_modules/
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+package-lock.json
+yarn.lock
 
 # Archivos de entorno
 .env
@@ -15,42 +17,46 @@ yarn-error.log*
 .DS_Store
 Thumbs.db
 
-# IDEs
-.vscode/
+# IDEs y editores
+.vscode/settings.json
 .idea/
 *.swp
 *.swo
+*~
 
 # Logs
 logs
 *.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
 
 # Archivos temporales
 tmp/
 temp/
+.cache/
 
-# Archivos de build
+# Archivos de build y distribución
 dist/
 build/
 out/
+public/build/
 
-# Python
-__pycache__/
-*.py[cod]
-*$py.class
-*.so
-.Python
-env/
-venv/
-ENV/
+# Archivos de audio grandes (opcional)
+# src/assets/audio/*.mp3
+# src/assets/audio/*.wav
+# src/assets/audio/*.ogg
 
-# Java
-*.class
-*.jar
-*.war
-*.ear
-target/
+# Archivos de imagen grandes (opcional)
+# src/assets/images/*.psd
+# src/assets/images/*.ai
+
+# Coverage y testing
+coverage/
+.nyc_output/
+.coverage/
 
 # Otros
 *.bak
 *.tmp
+.sass-cache/

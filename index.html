@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="MusicHero - Tu aplicación web para gestionar y disfrutar música">
+    <title>MusicHero</title>
+    <link rel="stylesheet" href="src/css/styles.css">
+    <link rel="icon" href="src/assets/images/favicon.ico" type="image/x-icon">
+</head>
+<body>
+    <header class="header">
+        <nav class="navbar">
+            <div class="nav-brand">
+                <h1>🎵 MusicHero</h1>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="#home">Inicio</a></li>
+                <li><a href="#library">Biblioteca</a></li>
+                <li><a href="#playlists">Playlists</a></li>
+                <li><a href="#discover">Descubrir</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="main-content">
+        <section id="home" class="hero-section">
+            <div class="hero-content">
+                <h2>Bienvenido a MusicHero</h2>
+                <p>Tu plataforma favorita para gestionar y disfrutar de música</p>
+                <button class="cta-button">Comenzar</button>
+            </div>
+        </section>
+
+        <section id="player" class="music-player">
+            <div class="player-controls">
+                <button id="prevBtn">⏮️</button>
+                <button id="playBtn">▶️</button>
+                <button id="nextBtn">⏭️</button>
+            </div>
+            <div class="track-info">
+                <h3 id="trackTitle">Selecciona una canción</h3>
+                <p id="trackArtist">Artista</p>
+            </div>
+            <div class="progress-bar">
+                <input type="range" id="progressSlider" min="0" max="100" value="0">
+            </div>
+        </section>
+
+        <section id="library" class="music-library">
+            <h2>Tu Biblioteca</h2>
+            <div class="track-list" id="trackList">
+                <!-- Las canciones se cargarán dinámicamente -->
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>&copy; 2025 MusicHero. Hecho con ❤️ para los amantes de la música.</p>
+    </footer>
+
+    <script src="src/js/app.js"></script>
+</body>
+</html>

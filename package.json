@@ -1,0 +1,34 @@
+{
+  "name": "musichero",
+  "version": "1.0.0",
+  "description": "Una aplicación web moderna para gestionar y disfrutar música",
+  "main": "index.html",
+  "scripts": {
+    "start": "npx live-server --port=3000 --open=/index.html",
+    "dev": "npx live-server --port=3000 --open=/index.html --watch=src",
+    "build": "echo 'Build process - agregar herramientas de build aquí'",
+    "test": "echo 'Tests - agregar framework de testing aquí'"
+  },
+  "keywords": [
+    "music",
+    "web-app",
+    "javascript",
+    "html5",
+    "css3",
+    "audio"
+  ],
+  "author": "Tu Nombre",
+  "license": "MIT",
+  "devDependencies": {
+    "live-server": "^1.2.2"
+  },
+  "dependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Halainf1/musichero.git"
+  },
+  "homepage": "https://github.com/Halainf1/musichero#readme",
+  "engines": {
+    "node": ">=14.0.0"
+  }
+}

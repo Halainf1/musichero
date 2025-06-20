@@ -1,0 +1,15 @@
+{
+    "recommendations": [
+        "ms-vscode.vscode-json",
+        "bradlc.vscode-tailwindcss",
+        "esbenp.prettier-vscode",
+        "ritwickdey.liveserver",
+        "formulahendry.auto-rename-tag",
+        "ms-vscode.vscode-typescript-next",
+        "christian-kohler.path-intellisense",
+        "ms-vscode.vscode-css-peek",
+        "zignd.html-css-class-completion",
+        "eamodio.gitlens",
+        "github.vscode-pull-request-github"
+    ]
+}
